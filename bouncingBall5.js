@@ -128,7 +128,10 @@ draw = function() {
 
         // Vérification de la condition de victoire
         if (dist(x, correctedY, 900, 520) < 35) {
-            console.log("Victoire!");
+            // Affiche un message de victoire
+            textSize(32);
+            fill(0, 102, 153);
+            text('Victoire!', 400, 300);
             noLoop(); // Arrête l'animation
         }
 
