@@ -146,7 +146,6 @@ draw = function() {
 			fill("darkgreen")    // Choix de la couleur
 			ellipse(900,525,70,14)  //dessin d'une ellipse : centre: (900,525) largeur : 70 , hauteur : 14
 			circle(200,200,100)
-			w=w+1
 		}
 		}
 };
