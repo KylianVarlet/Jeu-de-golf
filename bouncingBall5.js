@@ -125,6 +125,13 @@ draw = function() {
 		ellipse(900,525,70,14)  //dessin d'une ellipse : centre: (900,525) largeur : 70 , hauteur : 14
 		
 		x = x + dx;
+
+        // Vérification de la condition de victoire
+        if (dist(x, correctedY, 900, 520) < 35) {
+            console.log("Victoire!");
+            noLoop(); // Arrête l'animation
+        }
+
 		if(x > 880 && x < 920 && cdr == 3) {
 			// Dessine la couleur du ciel sur la totalité du canvas
 			background(180, 220, 225);
