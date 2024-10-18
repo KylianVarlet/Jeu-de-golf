@@ -30,6 +30,8 @@ var ka = 1;
 var step = 0;
 // Définition d'une variable cdr : correspond au nombre de rebond effectué par la balle.
 var cdr = 0;
+// Définition d'une variable w : utilisée pour compter quelque chose (à définir selon votre besoin).
+var w = 0;
 
 function mouseMoved() { //Permet de suivre la souris n'importe où dans la canvas et dessiner un trait rouge de la balle a la souris.
 // Draw the arrow
@@ -127,12 +129,16 @@ draw = function() {
 		x = x + dx;
 
         // Vérification de la condition de victoire
-        if (dist(x, correctedY, 900, 520) < 35) {
+        if (dist(x, correctedY, 900, 520) < 35 && (cdr == 0 || cdr == 1)) {
             // Affiche un message de victoire
             textSize(32);
             fill(0, 102, 153);
             text('Victoire!', 400, 300);
             noLoop(); // Arrête l'animation
+            // Réactualise la page après 5 secondes
+            setTimeout(function() {
+                location.reload();
+            }, 5000);
         }
 
 		if(x > 880 && x < 920 && cdr == 3) {
@@ -146,6 +152,7 @@ draw = function() {
 			fill("darkgreen")    // Choix de la couleur
 			ellipse(900,525,70,14)  //dessin d'une ellipse : centre: (900,525) largeur : 70 , hauteur : 14
 			circle(200,200,100)
+			w = w + 1
 		}
 		}
 };
