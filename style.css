@@ -1,0 +1,42 @@
+body {
+	background-color:orange;
+}
+
+#block_page  {
+	width: 1100px;
+	margin:auto;
+	background-color: grey;
+	opacity : 0.85;
+	padding : 20px;
+	border-radius : 10px;
+}
+
+p
+{
+    color: red;
+	font-size: 1em; /* Paragraphes de 14 pixels */
+	font-family: "Comic Sans MS", Impact, Arial;
+	font-style: normal;
+	text-align : justify;
+}
+
+h1
+{
+    font-size: 3.5em; /* Titres 1 : 4,5 fois la taille "normale" */
+	font-style: italic;
+	text-align: center;
+	color: #F6D152;
+	border: 4px dashed #F6D152 ;
+	border-radius:30px;
+}
+
+
+h2
+{
+    font-size: 2em; /* Titres de 40 pixels */
+	font-style: normal;
+    text-align: center;
+	font-weight: bold;
+	color: rgb(212,99,225);
+}
+
